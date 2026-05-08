@@ -9,4 +9,10 @@ export type RootStackParamList = {
     category: string;
     speaker: string;
   };
+  ApiPosts: undefined;
+  ApiPostDetails: {
+  id: number;
+  title: string;
+  body: string;
+};
 };

@@ -1,6 +1,6 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useState } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { Button, FlatList, StyleSheet, Text, View } from "react-native";
 import AddEventForm from "../../components/AddEventForm";
 import ListItem from "../../components/ListItem";
 import { events as initialEvents } from "../../data/events";
@@ -26,6 +26,10 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
     return (
         <View style={styles.container}>
             <Text style={styles.header}>Wydarzenia</Text>
+            <Button
+                title="Pokaż posty z API"
+                onPress={() => navigation.navigate("ApiPosts")}
+            />
             <AddEventForm onAddEvent={addEvent} />
             <FlatList
                 data={events}
